@@ -83,6 +83,7 @@
                     <connections>
                         <segue destination="3pp-jT-8md" kind="relationship" relationship="viewControllers" id="dKt-3I-oeI"/>
                         <segue destination="nM7-eF-Vtm" kind="relationship" relationship="viewControllers" id="rjE-7i-f8J"/>
+                        <segue destination="ysM-qY-4Y8" kind="relationship" relationship="viewControllers" id="ZUk-sr-gnw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYi-8r-ZTk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -93,7 +94,7 @@
         <scene sceneID="g4d-FY-uE0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3pp-jT-8md" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="New Contact" id="xru-Vz-srq"/>
+                    <tabBarItem key="tabBarItem" title="New Contact" image="person.crop.circle.badge.plus" catalog="system" id="xru-Vz-srq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qtW-cZ-Iss">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -108,11 +109,36 @@
             </objects>
             <point key="canvasLocation" x="1906" y="-1012"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="hqf-L4-JQo">
+            <objects>
+                <viewController id="ysM-qY-4Y8" customClass="MapViewController" customModule="Telegramme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fje-jA-70v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Cta-Ar-fjR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UBl-z3-FWK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="dRc-4E-0vp"/>
+                    <connections>
+                        <outlet property="mapView" destination="Cta-Ar-fjR" id="9Lo-lv-pHY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7y-uG-ozm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834.78260869565224" y="531.69642857142856"/>
+        </scene>
         <!--Contacts-->
         <scene sceneID="mI0-rW-ScA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nM7-eF-Vtm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contacts" id="Uef-1P-ngG"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="rectangle.stack.person.crop.fill" catalog="system" id="Uef-1P-ngG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BO5-KM-hBM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -225,6 +251,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="113"/>
+        <image name="rectangle.stack.person.crop.fill" catalog="system" width="128" height="122"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
